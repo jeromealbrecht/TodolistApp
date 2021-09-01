@@ -12,14 +12,10 @@ const App = () => {
     login: login,
     setLogin: () => setLogin()
   }
-
-
+  
   return (
     <MyContext.Provider value={isLogged}>
-
       <Navigation />
-
-
     </MyContext.Provider>
 
   )
