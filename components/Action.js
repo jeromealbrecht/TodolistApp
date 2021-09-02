@@ -8,7 +8,7 @@ const Action = (props) => {
 
     const [action, setAction] = useState(false);
 
-    async function Archiver() {
+    async function handlePressArchived() {
 
         try {
             await firestore()
@@ -22,7 +22,7 @@ const Action = (props) => {
 
     }
 
-    function Supprimer() {
+    function handlePressDelete() {
         setAction(false)
     }
 
@@ -33,13 +33,13 @@ const Action = (props) => {
 
 
 
-                    <Button style={{ flex: 1, marginTop: 5, height: 50, justifyContent: 'center' }} icon="briefcase-check" mode="contained" color='red' width={50} compact={true} onPress={() => Archiver()}>
+                    <Button style={{ flex: 1, marginTop: 5, height: 50, justifyContent: 'center' }} icon="briefcase-check" mode="contained" color='red' width={50} compact={true} onPress={() => handlePressArchived()}>
 
                     </Button>
 
                     :
 
-                    <Button style={{ flex: 1, marginTop: 25, height: 40 }} icon="balloon" mode="contained" color='#2DA137' compact={true} onPress={() => Supprimer()}>
+                    <Button style={{ flex: 1, marginTop: 25, height: 40 }} icon="balloon" mode="contained" color='#2DA137' compact={true} onPress={() => handlePressDelete()}>
 
                     </Button>
 
